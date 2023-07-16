@@ -1,10 +1,41 @@
 <template>
-  <nav>
+  <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  </nav> -->
+  <div class="container d-flex container-box">
+  <HomeForm  :formData="formData"
+        @changeFormData="changeFormData($event)" />
+  <!-- <HomePrint :formData="formData"/> -->
+  </div>
 </template>
+
+<script>
+import HomeForm from './components/HomeForm.vue';
+import HomePrint from './components/HomePrint.vue';
+export default {
+  name: "App",
+  components: {
+    HomeForm,
+    HomePrint
+  },
+  data() {
+    return {
+      title: 'ID Card Generator',
+      formData: {
+        PropsName: "",
+        PropsComment: "",
+        url:"",
+      }
+    }
+  },
+  methods: {
+    changeFormData(keyObject) {
+      this.formData = Object.assign(this.formData, keyObject);
+    }
+  }
+};
+</script>
 
 <style>
 #app {
