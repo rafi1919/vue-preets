@@ -1,5 +1,7 @@
 # vue-preets
 
+https://vue-preets.vercel.app/
+
 ## Project setup
 ```
 npm install
