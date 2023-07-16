@@ -146,7 +146,7 @@ export default {
         document.body.appendChild(canvas);
         const image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
         const a = document.createElement("a");
-        a.setAttribute("download", `collegeidcard.png`);
+        a.setAttribute("download", `preets.png`);
         a.setAttribute("href", image);
         a.click();
       },
